@@ -1,3 +1,7 @@
+---
+layout: default
+title: Poetry Setup
+---
 # Poetry Setup for Python Projects
 
 ## Introduction to Poetry

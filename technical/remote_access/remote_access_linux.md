@@ -1,23 +1,28 @@
-# Remote Access Setup for Windows (SSH + VNC)
+---
+layout: default
+title: Linux
+parent: Remote Access
+---
+# Remote Access Setup for Debian-based Linux (SSH + VNC)
 
 ## SSH Keys Setup
 
-SSH keys provide a secure way of logging into your server and are recommended for all users. The steps for setting up SSH keys on Windows using PowerShell are as follows:
+SSH keys provide a secure way of logging into your server and are recommended for all users. The steps for setting up SSH keys on Linux are as follows:
 
-1. Open PowerShell. You can do this by searching for "PowerShell" in the Windows search bar.
+1. Open Terminal.
 
-2. In the PowerShell window, enter the following command to generate a new SSH key. Replace "<your_email@example.com>" with your actual email address.
+2. In the Terminal window, enter the following command to generate a new SSH key. Replace "<your_email@example.com>" with your actual email address.
 
-    ```powershell
+    ```bash
     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     ```
 
 3. Press `Enter` to accept the default location for your SSH key files. You'll be asked to enter a passphrase. This is optional but recommended for additional security.
 
-4. Once the keys are generated, you can display the public key in PowerShell with the following command:
+4. Once the keys are generated, you can display the public key in Terminal with the following command:
 
-    ```powershell
-    Get-Content ~/.ssh/id_rsa.pub
+    ```bash
+    cat ~/.ssh/id_rsa.pub
     ```
 
 5. Now you can copy the output and paste this key into the SSH Keys section of your server or service that requires SSH authentication.
@@ -26,7 +31,7 @@ SSH keys provide a secure way of logging into your server and are recommended fo
 
 SSH port forwarding, also known as SSH tunneling, is a method of transporting arbitrary networking data over an encrypted SSH connection. Here's how to set it up:
 
-1. Open PowerShell.
+1. Open Terminal.
 
 2. Use the following command to start an SSH tunnel. Replace the placeholders as follows:
 
@@ -34,7 +39,7 @@ SSH port forwarding, also known as SSH tunneling, is a method of transporting ar
     - `<remote-host>`: The remote host you're connecting to.
     - `<remote-port>`: The remote port on the remote host.
 
-    ```powershell
+    ```bash
     ssh -L <local-port>:localhost:<remote-port> <remote-host>
     ```
 
@@ -42,15 +47,23 @@ SSH port forwarding, also known as SSH tunneling, is a method of transporting ar
 
 ## VNC Viewer Setup
 
-VNC Viewer allows you to remotely control a computer. Here's how to set it up on Windows:
+For Linux, we'll use TigerVNC Viewer as an example. Here's how to install and use it:
 
-1. Download VNC Viewer from [this link](https://www.realvnc.com/en/connect/download/viewer/).
+1. Open Terminal.
 
-2. Install VNC Viewer by following the prompts in the setup wizard.
+2. Use the following command to install TigerVNC Viewer:
 
-3. Open VNC Viewer.
+    ```bash
+    sudo apt install tigervnc-viewer
+    ```
 
-4. In the "VNC Server" field, enter the IP address of the machine you wish to connect to.
+3. To open VNC Viewer, enter the following command:
+
+    ```bash
+    vncviewer
+    ```
+
+4. In the "VNC server" field, enter the IP address of the machine you wish to connect to.
 
 5. Click "Connect."
 
@@ -60,7 +73,7 @@ To securely connect to a VNC server, you can tunnel your VNC traffic through the
 
 1. First, set up the SSH tunnel with the following command. Replace the placeholders as before, and use `5900` as the `<remote-port>`, as this is the default port that VNC servers listen on.
 
-    ```powershell
+    ```bash
     ssh -L <local-port>:localhost:5900 <remote-host>
     ```
 
@@ -74,11 +87,11 @@ Congratulations, you're now connected to your remote host via VNC over a secure 
 
 If a VNC server is not started on the remote machine, you will need to do so yourself. To start a VNC server on the remote machine, you'll need to SSH into it and run the `vncserver` command. Here's how:
 
-1. Open PowerShell.
+1. Open Terminal.
 
 2. Use the `ssh` command to connect to your remote machine. Replace `<remote-host>` with the hostname or IP address of your remote machine.
 
-    ```powershell
+    ```bash
     ssh <remote-host>
     ```
 

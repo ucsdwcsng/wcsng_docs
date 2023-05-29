@@ -1,0 +1,17 @@
+title: Just the Docs Template
+description: A starter template for a Jeykll site using the Just the Docs theme!
+theme: just-the-docs
+
+# baseurl: "/wcsng_docs"
+url: https://ucsdwcsng.github.io
+
+aux_links:
+  "WCSNG Home":
+    - "https://wcsng.ucsd.edu"
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: true
+
+
+logo: "/assets/images/wcsng.png"
+favicon_ico: "/assets/images/favicon.ico"
