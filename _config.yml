@@ -13,5 +13,7 @@ aux_links:
 aux_links_new_tab: true
 
 
-logo: "/assets/images/wcsng.png"
+logo: "/assets/images/wcsng_white.png"
 favicon_ico: "/assets/images/favicon.ico"
+
+color_scheme: dark
