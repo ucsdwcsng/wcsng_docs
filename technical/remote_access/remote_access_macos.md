@@ -1,10 +1,15 @@
-# Remote Access Setup for Debian-based Linux (SSH + VNC)
+---
+layout: default
+title: MacOS
+parent: Remote Access
+---
+# Remote Access Setup for MacOS (SSH + VNC)
 
 ## SSH Keys Setup
 
-SSH keys provide a secure way of logging into your server and are recommended for all users. The steps for setting up SSH keys on Linux are as follows:
+SSH keys provide a secure way of logging into your server and are recommended for all users. The steps for setting up SSH keys on macOS are as follows:
 
-1. Open Terminal.
+1. Open Terminal. You can do this by searching for "Terminal" in Spotlight.
 
 2. In the Terminal window, enter the following command to generate a new SSH key. Replace "<your_email@example.com>" with your actual email address.
 
@@ -12,7 +17,7 @@ SSH keys provide a secure way of logging into your server and are recommended fo
     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     ```
 
-3. Press `Enter` to accept the default location for your SSH key files. You'll be asked to enter a passphrase. This is optional but recommended for additional security.
+3. Press `Return` to accept the default location for your SSH key files. You'll be asked to enter a passphrase. This is optional but recommended for additional security.
 
 4. Once the keys are generated, you can display the public key in Terminal with the following command:
 
@@ -42,25 +47,15 @@ SSH port forwarding, also known as SSH tunneling, is a method of transporting ar
 
 ## VNC Viewer Setup
 
-For Linux, we'll use TigerVNC Viewer as an example. Here's how to install and use it:
+VNC Viewer allows you to remotely control a computer. macOS comes with a built-in VNC viewer called Screen Sharing. Here's how to use it:
 
-1. Open Terminal.
+1. Open Finder.
 
-2. Use the following command to install TigerVNC Viewer:
+2. In the menu bar, click on "Go" and then "Connect to Server..."
 
-    ```bash
-    sudo apt install tigervnc-viewer
-    ```
+3. In the "Server Address" field, enter `vnc://<IP-address>`, replacing `<IP-address>` with the IP address of the machine you wish to connect to.
 
-3. To open VNC Viewer, enter the following command:
-
-    ```bash
-    vncviewer
-    ```
-
-4. In the "VNC server" field, enter the IP address of the machine you wish to connect to.
-
-5. Click "Connect."
+4. Click "Connect."
 
 ## Connecting to VNC through SSH Port Forward
 
@@ -72,7 +67,7 @@ To securely connect to a VNC server, you can tunnel your VNC traffic through the
     ssh -L <local-port>:localhost:5900 <remote-host>
     ```
 
-2. Then, in VNC Viewer, in the "VNC Server" field, instead of entering the remote host's IP address, enter `localhost:<local-port>`, where `<local-port>` is the local port you used in the SSH command.
+2. Then, in the "Connect to Server" dialog in Finder, in the "Server Address" field, instead of entering the remote host's IP address, enter `vnc://localhost:<local-port>`, where `<local-port>` is the local port you used in the SSH command.
 
 3. Click "Connect."
 
