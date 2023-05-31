@@ -1,7 +1,9 @@
 ---
 layout: default
 title: Poetry Setup
+parent: python
 ---
+
 # Poetry Setup for Python Projects
 
 ## Introduction to Poetry
@@ -76,4 +78,20 @@ This will install the dependencies listed in your `pyproject.toml` file.
 
 That's it! You now have a Conda environment with Python 3.10 set up, Poetry installed, and you can use Poetry to manage your project dependencies and build your project.
 
----
+## Gotchas
+
+### Keyring not working correctly on Ubuntu 20.04
+
+Issue ID: [#6354](<https://github.com/python-poetry/poetry/issues/6354>)
+
+Summary:
+
+User eduDorus reported that Poetry was not working correctly on Ubuntu 20.04 LTS with Python 3.10.6 and Poetry version 1.2.0. The issue was with the keyring not authenticating unless the keyring backend was set to null. The user received a "KeyringLocked" error message.
+
+Solution:
+
+A solution was provided which involved setting the PYTHON_KEYRING_BACKEND environment variable to "keyring.backends.null.Keyring".
+
+```bash
+export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
+```
