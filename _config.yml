@@ -4,8 +4,8 @@ theme: just-the-docs
 
 repository: ucsdwcsng/wcsng_docs # for github-metadata
 
-# baseurl: "/docs"
-# url: https://wcsng.ucsd.edu
+baseurl: "/docs"
+url: "https://wcsng.ucsd.edu"
 
 aux_links:
   "WCSNG Home":
