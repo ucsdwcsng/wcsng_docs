@@ -6,7 +6,7 @@ parent: Trivia
 
 # Why Does RPSMA Exist?
 
-![SMA Connector Types](fig/sma_types.webp)
+![SMA Connector Types](../fig/sma_types.webp)
 
 SMA connectors, first introduced in the 1960s, are widely used in radio and communication equipment. They follow standard gender conventions, where the female connector features a center hole, and the male connector has a center pin.
 

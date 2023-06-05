@@ -10,7 +10,7 @@ parent: Nucleo Flash
 
 You need to remove a CN2 jumper pin.
 
-![nucleo flash](fig/001_nucleo_flash.jpg)
+![nucleo flash](../fig/001_nucleo_flash.jpg)
 
 You need to connect 4 wires from CN4 to EVB1000.
 
@@ -23,10 +23,9 @@ You need to connect 4 wires from CN4 to EVB1000.
 | x   | 5   | NRST       | reset                         |
 | x   | 6   | SWO        | not used.                     |
 
-
 ## EVB1000's pin
 
-![evb1000_flash](fig/002_evb1000_flash.jpg)
+![evb1000_flash](../fig/002_evb1000_flash.jpg)
 
 | function      | Pin | Pin | function |
 |---------------|-----|-----|----------|
@@ -43,7 +42,6 @@ You need to connect 4 wires from CN4 to EVB1000.
 
 ## Wire color
 
-
 | function | color  |
 |----------|--------|
 | VCC      | red    |
@@ -51,7 +49,6 @@ You need to connect 4 wires from CN4 to EVB1000.
 | DATA     | green  |
 | CLK      | gray   |
 | RESET    | yellow |
-
 
 # FAQ
 
@@ -70,7 +67,6 @@ You just need to unplug/plug a usb cable from/to Nucleo board.
 2. connect Nucleo and EVB1000
 3. Nucleo turn on with USB connection
 
-
 ## `st-flash` from command line
 
 ### st-flash write ./multiposition.bin 0x8000000
@@ -80,7 +76,6 @@ write
 ### st-flash erase
 
 erase before write
-
 
 ### st-info --probe
 
