@@ -36,7 +36,13 @@ To contribute to the WCSNG documentation, you have the following options:
 
 5. Edit or create new Markdown files in the appropriate directories to make your contributions. You can use your preferred text editor or Markdown editor to write the documentation. The changes will be reflected in the running Docker container.
 
-6. Once you are satisfied with your changes, commit and push them to your forked repository, following the same steps as in Option 1.
+6. Once you are satisfied with your changes, **commit** and **push** them to your forked repository:
+
+   ```shell
+   git add .
+   git commit -m "Add your commit message here"
+   git push
+   ```
 
 7. Finally, create a pull request (PR) by navigating to the original repository's page and clicking on the "New pull request" button. Provide a meaningful title and description for your PR, and submit it for review.
 

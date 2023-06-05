@@ -9,4 +9,6 @@ These docs are a collaborative effort by the members of [Wireless Communication 
 
 Contributing: Check out the [README](https://github.com/ucsdwcsng/wcsng_docs) on the github page.
 
+Testing deployment on wcsng.ucsd.edu
+
 **P.S.**: LLMs are quite useful for generating tutorials and documentation.

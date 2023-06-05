@@ -2,8 +2,8 @@ title: WCSNG Docs
 description: Documentation and tutorials courtesy of ucsdwcsng
 theme: just-the-docs
 
-# baseurl: "/wcsng_docs"
-url: https://ucsdwcsng.github.io
+baseurl: "/docs"
+url: https://wcsng.ucsd.edu
 
 aux_links:
   "WCSNG Home":
