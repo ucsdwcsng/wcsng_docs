@@ -1,6 +1,6 @@
 ---
 layout: default
-title: trivia
+title: Trivia
 has_children: true
 ---
 

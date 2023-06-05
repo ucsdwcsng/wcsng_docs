@@ -2,6 +2,8 @@ title: WCSNG Docs
 description: Documentation and tutorials courtesy of ucsdwcsng
 theme: just-the-docs
 
+repository: ucsdwcsng/wcsng_docs # for github-metadata
+
 baseurl: "/docs"
 url: https://wcsng.ucsd.edu
 
@@ -12,8 +14,16 @@ aux_links:
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
 
-
 logo: "/assets/images/wcsng_white.png"
 favicon_ico: "/assets/images/favicon.ico"
 
 color_scheme: dark
+
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+permalink: pretty

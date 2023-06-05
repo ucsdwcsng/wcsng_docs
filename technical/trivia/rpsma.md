@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Why does RPSMA exist?
-parent: trivia
+parent: Trivia
 ---
 
 # Why Does RPSMA Exist?
