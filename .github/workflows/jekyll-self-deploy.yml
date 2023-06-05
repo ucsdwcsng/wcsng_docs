@@ -49,5 +49,5 @@ jobs:
         run: sudo apt-get install -y sshpass
       - name: Deploy to self hosted website
         run: |
-        ${{ secrets.RSYNC_DOCS }}
+          ${{ secrets.RSYNC_DOCS }}
 
