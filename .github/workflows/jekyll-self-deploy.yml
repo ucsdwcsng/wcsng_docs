@@ -48,8 +48,6 @@ jobs:
       - name: Install necessary dependencies
         run: sudo apt-get install -y sshpass
       - name: Deploy to self hosted website
-        env:
-          SUPER_SECRET: ${{ secrets.RSYNC_HTDOCS }}
         run: |
-        $SUPER_SECRET/docs
+        ${{ secrets.RSYNC_DOCS }}
 
