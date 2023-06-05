@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Poetry Setup
-parent: python
+parent: Python
 ---
 
 # Poetry Setup for Python Projects

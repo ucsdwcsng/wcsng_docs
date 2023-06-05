@@ -2,7 +2,7 @@
 
 Welcome to the WCSNG Docs repository! These docs are a collaborative effort by the members of [Wireless Communication Sensing and Neworking Group](https://wcsng.ucsd.edu) at [UC San Diego](https://ucsd.edu).
 
-The website is accessible at [ucsdwcsng.github.io/wcsng_docs](https://ucsdwcsng.github.io/wcsng_docs).
+The website is accessible at [wcsng.ucsd.edu/docs](https://wcsng.ucsd.edu/docs).
 
 ## Getting Started
 
